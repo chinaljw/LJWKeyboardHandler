@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72D2B4261B0A408400AB51F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B4251B0A408400AB51F1 /* main.m */; };
+		72D2B4291B0A408400AB51F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B4281B0A408400AB51F1 /* AppDelegate.m */; };
+		72D2B42C1B0A408400AB51F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B42B1B0A408400AB51F1 /* ViewController.m */; };
+		72D2B42F1B0A408400AB51F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72D2B42D1B0A408400AB51F1 /* Main.storyboard */; };
+		72D2B4311B0A408400AB51F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72D2B4301B0A408400AB51F1 /* Images.xcassets */; };
+		72D2B4341B0A408400AB51F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72D2B4321B0A408400AB51F1 /* LaunchScreen.xib */; };
+		72D2B4401B0A408400AB51F1 /* LJWKeyboardHandlerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B43F1B0A408400AB51F1 /* LJWKeyboardHandlerExampleTests.m */; };
+		72D2B44E1B0A40DF00AB51F1 /* LJWKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B44B1B0A40DF00AB51F1 /* LJWKeyboardHandler.m */; };
+		72D2B44F1B0A40DF00AB51F1 /* UIWindow+LJWPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B44D1B0A40DF00AB51F1 /* UIWindow+LJWPresentViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72D2B43A1B0A408400AB51F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72D2B4181B0A408400AB51F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72D2B41F1B0A408400AB51F1;
+			remoteInfo = LJWKeyboardHandlerExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		72D2B4201B0A408400AB51F1 /* LJWKeyboardHandlerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LJWKeyboardHandlerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72D2B4241B0A408400AB51F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72D2B4251B0A408400AB51F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72D2B4271B0A408400AB51F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		72D2B4281B0A408400AB51F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		72D2B42A1B0A408400AB51F1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		72D2B42B1B0A408400AB51F1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		72D2B42E1B0A408400AB51F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		72D2B4301B0A408400AB51F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		72D2B4331B0A408400AB51F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		72D2B4391B0A408400AB51F1 /* LJWKeyboardHandlerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LJWKeyboardHandlerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72D2B43E1B0A408400AB51F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72D2B43F1B0A408400AB51F1 /* LJWKeyboardHandlerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJWKeyboardHandlerExampleTests.m; sourceTree = "<group>"; };
+		72D2B44A1B0A40DF00AB51F1 /* LJWKeyboardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJWKeyboardHandler.h; sourceTree = "<group>"; };
+		72D2B44B1B0A40DF00AB51F1 /* LJWKeyboardHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJWKeyboardHandler.m; sourceTree = "<group>"; };
+		72D2B44C1B0A40DF00AB51F1 /* UIWindow+LJWPresentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+LJWPresentViewController.h"; sourceTree = "<group>"; };
+		72D2B44D1B0A40DF00AB51F1 /* UIWindow+LJWPresentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+LJWPresentViewController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72D2B41D1B0A408400AB51F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72D2B4361B0A408400AB51F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72D2B4171B0A408400AB51F1 = {
+			isa = PBXGroup;
+			children = (
+				72D2B4221B0A408400AB51F1 /* LJWKeyboardHandlerExample */,
+				72D2B43C1B0A408400AB51F1 /* LJWKeyboardHandlerExampleTests */,
+				72D2B4211B0A408400AB51F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72D2B4211B0A408400AB51F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72D2B4201B0A408400AB51F1 /* LJWKeyboardHandlerExample.app */,
+				72D2B4391B0A408400AB51F1 /* LJWKeyboardHandlerExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72D2B4221B0A408400AB51F1 /* LJWKeyboardHandlerExample */ = {
+			isa = PBXGroup;
+			children = (
+				72D2B4491B0A40DF00AB51F1 /* LJWKeyboardHanlder */,
+				72D2B4271B0A408400AB51F1 /* AppDelegate.h */,
+				72D2B4281B0A408400AB51F1 /* AppDelegate.m */,
+				72D2B42A1B0A408400AB51F1 /* ViewController.h */,
+				72D2B42B1B0A408400AB51F1 /* ViewController.m */,
+				72D2B42D1B0A408400AB51F1 /* Main.storyboard */,
+				72D2B4301B0A408400AB51F1 /* Images.xcassets */,
+				72D2B4321B0A408400AB51F1 /* LaunchScreen.xib */,
+				72D2B4231B0A408400AB51F1 /* Supporting Files */,
+			);
+			path = LJWKeyboardHandlerExample;
+			sourceTree = "<group>";
+		};
+		72D2B4231B0A408400AB51F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72D2B4241B0A408400AB51F1 /* Info.plist */,
+				72D2B4251B0A408400AB51F1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72D2B43C1B0A408400AB51F1 /* LJWKeyboardHandlerExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				72D2B43F1B0A408400AB51F1 /* LJWKeyboardHandlerExampleTests.m */,
+				72D2B43D1B0A408400AB51F1 /* Supporting Files */,
+			);
+			path = LJWKeyboardHandlerExampleTests;
+			sourceTree = "<group>";
+		};
+		72D2B43D1B0A408400AB51F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72D2B43E1B0A408400AB51F1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72D2B4491B0A40DF00AB51F1 /* LJWKeyboardHanlder */ = {
+			isa = PBXGroup;
+			children = (
+				72D2B44A1B0A40DF00AB51F1 /* LJWKeyboardHandler.h */,
+				72D2B44B1B0A40DF00AB51F1 /* LJWKeyboardHandler.m */,
+				72D2B44C1B0A40DF00AB51F1 /* UIWindow+LJWPresentViewController.h */,
+				72D2B44D1B0A40DF00AB51F1 /* UIWindow+LJWPresentViewController.m */,
+			);
+			path = LJWKeyboardHanlder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72D2B41F1B0A408400AB51F1 /* LJWKeyboardHandlerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72D2B4431B0A408400AB51F1 /* Build configuration list for PBXNativeTarget "LJWKeyboardHandlerExample" */;
+			buildPhases = (
+				72D2B41C1B0A408400AB51F1 /* Sources */,
+				72D2B41D1B0A408400AB51F1 /* Frameworks */,
+				72D2B41E1B0A408400AB51F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LJWKeyboardHandlerExample;
+			productName = LJWKeyboardHandlerExample;
+			productReference = 72D2B4201B0A408400AB51F1 /* LJWKeyboardHandlerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		72D2B4381B0A408400AB51F1 /* LJWKeyboardHandlerExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72D2B4461B0A408400AB51F1 /* Build configuration list for PBXNativeTarget "LJWKeyboardHandlerExampleTests" */;
+			buildPhases = (
+				72D2B4351B0A408400AB51F1 /* Sources */,
+				72D2B4361B0A408400AB51F1 /* Frameworks */,
+				72D2B4371B0A408400AB51F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72D2B43B1B0A408400AB51F1 /* PBXTargetDependency */,
+			);
+			name = LJWKeyboardHandlerExampleTests;
+			productName = LJWKeyboardHandlerExampleTests;
+			productReference = 72D2B4391B0A408400AB51F1 /* LJWKeyboardHandlerExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72D2B4181B0A408400AB51F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = ljw;
+				TargetAttributes = {
+					72D2B41F1B0A408400AB51F1 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					72D2B4381B0A408400AB51F1 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 72D2B41F1B0A408400AB51F1;
+					};
+				};
+			};
+			buildConfigurationList = 72D2B41B1B0A408400AB51F1 /* Build configuration list for PBXProject "LJWKeyboardHandlerExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 72D2B4171B0A408400AB51F1;
+			productRefGroup = 72D2B4211B0A408400AB51F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72D2B41F1B0A408400AB51F1 /* LJWKeyboardHandlerExample */,
+				72D2B4381B0A408400AB51F1 /* LJWKeyboardHandlerExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72D2B41E1B0A408400AB51F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72D2B42F1B0A408400AB51F1 /* Main.storyboard in Resources */,
+				72D2B4341B0A408400AB51F1 /* LaunchScreen.xib in Resources */,
+				72D2B4311B0A408400AB51F1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72D2B4371B0A408400AB51F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72D2B41C1B0A408400AB51F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72D2B42C1B0A408400AB51F1 /* ViewController.m in Sources */,
+				72D2B4291B0A408400AB51F1 /* AppDelegate.m in Sources */,
+				72D2B4261B0A408400AB51F1 /* main.m in Sources */,
+				72D2B44E1B0A40DF00AB51F1 /* LJWKeyboardHandler.m in Sources */,
+				72D2B44F1B0A40DF00AB51F1 /* UIWindow+LJWPresentViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72D2B4351B0A408400AB51F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72D2B4401B0A408400AB51F1 /* LJWKeyboardHandlerExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72D2B43B1B0A408400AB51F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72D2B41F1B0A408400AB51F1 /* LJWKeyboardHandlerExample */;
+			targetProxy = 72D2B43A1B0A408400AB51F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		72D2B42D1B0A408400AB51F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72D2B42E1B0A408400AB51F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		72D2B4321B0A408400AB51F1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72D2B4331B0A408400AB51F1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72D2B4411B0A408400AB51F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		72D2B4421B0A408400AB51F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72D2B4441B0A408400AB51F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LJWKeyboardHandlerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		72D2B4451B0A408400AB51F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LJWKeyboardHandlerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		72D2B4471B0A408400AB51F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LJWKeyboardHandlerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LJWKeyboardHandlerExample.app/LJWKeyboardHandlerExample";
+			};
+			name = Debug;
+		};
+		72D2B4481B0A408400AB51F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LJWKeyboardHandlerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LJWKeyboardHandlerExample.app/LJWKeyboardHandlerExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72D2B41B1B0A408400AB51F1 /* Build configuration list for PBXProject "LJWKeyboardHandlerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72D2B4411B0A408400AB51F1 /* Debug */,
+				72D2B4421B0A408400AB51F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72D2B4431B0A408400AB51F1 /* Build configuration list for PBXNativeTarget "LJWKeyboardHandlerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72D2B4441B0A408400AB51F1 /* Debug */,
+				72D2B4451B0A408400AB51F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		72D2B4461B0A408400AB51F1 /* Build configuration list for PBXNativeTarget "LJWKeyboardHandlerExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72D2B4471B0A408400AB51F1 /* Debug */,
+				72D2B4481B0A408400AB51F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72D2B4181B0A408400AB51F1 /* Project object */;
+}
