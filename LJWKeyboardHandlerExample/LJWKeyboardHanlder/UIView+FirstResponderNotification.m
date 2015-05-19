@@ -39,7 +39,7 @@
 - (BOOL)ljw_becomeFirstResponder
 {
     
-    NSLog(@"%@ becomeFirstResponder", self);
+//    NSLog(@"%@ becomeFirstResponder", self);
     
     [[NSNotificationCenter defaultCenter] postNotificationName:LJWFirstResponderChanged object:nil userInfo:@{@"firstResponder":self}];
     

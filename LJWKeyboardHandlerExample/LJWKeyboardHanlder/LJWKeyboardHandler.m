@@ -194,6 +194,11 @@
 
 - (void)didFirstResponderChanged:(NSNotification *)notification
 {
+    
+    if (self.firstResponder == notification.userInfo[@"firstResponder"]) {
+        return;
+    }
+    
     self.firstResponder = notification.userInfo[@"firstResponder"];
     
     if (self.isKeyboardShowing) {
