@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface LJWKeyboardHandler : NSObject
 
@@ -28,5 +29,7 @@
  *  @return self
  */
 - (instancetype)initWithTheViewNeedsToBeReset:(UIView *)view;
+
++ (instancetype)shareHandler;
 
 @end

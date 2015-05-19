@@ -7,6 +7,8 @@
 //
 
 #import "LJWKeyboardHandler.h"
+#import "UIWindow+LJWPresentViewController.h"
+#import "UIView+FirstResponderNotification.h"
 
 @interface LJWKeyboardHandler ()
 
@@ -21,9 +23,14 @@
 @property (nonatomic, assign) BOOL isOrigin;
 
 /**
- *  键盘的fram
+ *  键盘的frame
  */
 @property (nonatomic, assign) CGRect keyboardFrame;
+
+/**
+ *  第一响应者
+ */
+@property (nonatomic, strong) UIView *firstResponder;
 
 @end
 
@@ -46,7 +53,7 @@
     if (self) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willKeyboardShow:) name:UIKeyboardWillShowNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willKeyboardHide:) name:UIKeyboardWillHideNotification object:nil];
-        [[UIApplication sharedApplication].keyWindow addObserver:self forKeyPath:@"firstResponder" options:NSKeyValueObservingOptionNew context:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didFirstResponderChanged:) name:LJWFirstResponderChanged object:nil];
         self.assistantHeight = 10.f;
     }
     return self;
@@ -85,14 +92,12 @@
 
 - (void)resetTheViewNeedsToBeResetAppropraitly
 {
-
-    UIView *firstResponder = [self keyWindowFirstResponder];
     
-//    LJWLog(@"%@", NSStringFromCGRect(firstResponder.frame));
+//    NSLog(@"%@", NSStringFromCGRect(self.firstResponder.frame));
     
-    CGRect firstResponderFrameInWindow = [firstResponder convertRect:firstResponder.bounds toView:[UIApplication sharedApplication].keyWindow.presentViewController.view];
+    CGRect firstResponderFrameInWindow = [self.firstResponder convertRect:self.firstResponder.bounds toView:[UIApplication sharedApplication].keyWindow.presentViewController.view];
     
-    if (firstResponder) {
+    if (self.firstResponder) {
         
         if (self.keyboardFrame.origin.y < firstResponderFrameInWindow.origin.y + firstResponderFrameInWindow.size.height) {
             
@@ -143,34 +148,11 @@
 
 }
 
-- (UIView *)keyWindowFirstResponder
-{
-    
-    SEL firstResponderSEL = NSSelectorFromString(@"firstResponder");
-    
-    if ([[UIApplication sharedApplication].keyWindow respondsToSelector:firstResponderSEL]) {
-        
-       return [[UIApplication sharedApplication].keyWindow performSelector:firstResponderSEL];
-        
-    }
-    
-    return nil;
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    
-    if (self.isKeyboardShowing) {
-        [self resetTheViewNeedsToBeResetAppropraitly];
-    }
-    
-}
-
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
-    [[UIApplication sharedApplication].keyWindow removeObserver:self forKeyPath:@"firstResponder"];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:LJWFirstResponderChanged object:nil];
 }
 
 #pragma mark - 如果缺少类目请使用此方法获取presentViewController
@@ -199,5 +181,25 @@
     return currentViewController;
 }
 
++ (instancetype)shareHandler
+{
+    static LJWKeyboardHandler *s_Handler = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        s_Handler = [[LJWKeyboardHandler alloc] init];
+    });
+    
+    return s_Handler;
+}
+
+- (void)didFirstResponderChanged:(NSNotification *)notification
+{
+    self.firstResponder = notification.userInfo[@"firstResponder"];
+    
+    if (self.isKeyboardShowing) {
+        [self resetTheViewNeedsToBeResetAppropraitly];
+    }
+
+}
 
 @end
