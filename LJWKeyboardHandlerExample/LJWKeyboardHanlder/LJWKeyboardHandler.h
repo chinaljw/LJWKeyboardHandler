@@ -12,24 +12,18 @@
 @interface LJWKeyboardHandler : NSObject
 
 /**
- *  需要被调整的视图
- */
-@property (nonatomic, strong) UIView *viewNeedsToBeReset;
-
-/**
  *  辅助的高度
  */
 @property (nonatomic, assign) CGFloat assistantHeight;
 
 /**
- *  初始化方法
- *
- *  @param view 需要被调整的视图
- *
- *  @return self
+ *  开始处理
  */
-- (instancetype)initWithTheViewNeedsToBeReset:(UIView *)view;
+- (void)startHandling;
 
-+ (instancetype)shareHandler;
+/**
+ *  结束处理
+ */
+- (void)stopHandling;
 
 @end

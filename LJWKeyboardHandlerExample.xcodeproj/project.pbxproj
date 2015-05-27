@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		723AAE841B157C6F005460FB /* UIViewController+LJWKeyboardHandlerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 723AAE831B157C6F005460FB /* UIViewController+LJWKeyboardHandlerHelper.m */; };
 		72D2B4261B0A408400AB51F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B4251B0A408400AB51F1 /* main.m */; };
 		72D2B4291B0A408400AB51F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B4281B0A408400AB51F1 /* AppDelegate.m */; };
 		72D2B42C1B0A408400AB51F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B42B1B0A408400AB51F1 /* ViewController.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		723AAE821B157C6F005460FB /* UIViewController+LJWKeyboardHandlerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LJWKeyboardHandlerHelper.h"; sourceTree = "<group>"; };
+		723AAE831B157C6F005460FB /* UIViewController+LJWKeyboardHandlerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LJWKeyboardHandlerHelper.m"; sourceTree = "<group>"; };
 		72D2B4201B0A408400AB51F1 /* LJWKeyboardHandlerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LJWKeyboardHandlerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D2B4241B0A408400AB51F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72D2B4251B0A408400AB51F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				72D2B44D1B0A40DF00AB51F1 /* UIWindow+LJWPresentViewController.m */,
 				72D2B4501B0A49CC00AB51F1 /* UIView+FirstResponderNotification.h */,
 				72D2B4511B0A49CC00AB51F1 /* UIView+FirstResponderNotification.m */,
+				723AAE821B157C6F005460FB /* UIViewController+LJWKeyboardHandlerHelper.h */,
+				723AAE831B157C6F005460FB /* UIViewController+LJWKeyboardHandlerHelper.m */,
 			);
 			path = LJWKeyboardHanlder;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			files = (
 				72D2B42C1B0A408400AB51F1 /* ViewController.m in Sources */,
 				72D2B4291B0A408400AB51F1 /* AppDelegate.m in Sources */,
+				723AAE841B157C6F005460FB /* UIViewController+LJWKeyboardHandlerHelper.m in Sources */,
 				72D2B4261B0A408400AB51F1 /* main.m in Sources */,
 				72D2B44E1B0A40DF00AB51F1 /* LJWKeyboardHandler.m in Sources */,
 				72D2B44F1B0A40DF00AB51F1 /* UIWindow+LJWPresentViewController.m in Sources */,
@@ -438,6 +444,7 @@
 				72D2B4451B0A408400AB51F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72D2B4461B0A408400AB51F1 /* Build configuration list for PBXNativeTarget "LJWKeyboardHandlerExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +453,7 @@
 				72D2B4481B0A408400AB51F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

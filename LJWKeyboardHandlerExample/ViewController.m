@@ -9,11 +9,10 @@
 #import "ViewController.h"
 #import "LJWKeyboardHandler.h"
 //#import "UIView+FirstResponderNotification.h"
-//#import "DaiDodgeKeyboard.h"
+//#import "IQKeyboardManager.h"
+#import "UIViewController+LJWKeyboardHandlerHelper.h"
 
 @interface ViewController ()
-
-@property (nonatomic, strong) LJWKeyboardHandler *handler;
 
 @end
 
@@ -24,9 +23,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //初始化一下就好
-    self.handler = [[LJWKeyboardHandler alloc] init];
-    
-//    [DaiDodgeKeyboard addRegisterTheViewNeedDodgeKeyboard:self.view];
+    self.ljwKeyboardHandler = [[LJWKeyboardHandler alloc] init];
     
 }
 

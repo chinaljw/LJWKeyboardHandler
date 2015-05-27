@@ -12,7 +12,6 @@
 //static char *LJWPresentViewControllerKey = "LJWPresentViewControllerKey";
 
 @implementation UIWindow (LJWPresentViewController)
-@dynamic presentViewController;
 
 - (UIViewController *)presentViewController
 {

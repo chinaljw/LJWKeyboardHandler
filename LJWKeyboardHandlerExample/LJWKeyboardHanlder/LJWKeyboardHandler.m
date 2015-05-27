@@ -32,42 +32,41 @@
  */
 @property (nonatomic, strong) UIView *firstResponder;
 
+/**
+ *  需要被调整的视图
+ */
+@property (nonatomic, strong) UIView *viewNeedsToBeReset;
+
+
 @end
 
 @implementation LJWKeyboardHandler
-
-- (UIView *)viewNeedsToBeReset
-{
-    if (!_viewNeedsToBeReset) {
-        
-        _viewNeedsToBeReset = [UIApplication sharedApplication].keyWindow.presentViewController.view;
-        
-    }
-    
-    return _viewNeedsToBeReset;
-}
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willKeyboardShow:) name:UIKeyboardWillShowNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willKeyboardHide:) name:UIKeyboardWillHideNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didFirstResponderChanged:) name:LJWFirstResponderChanged object:nil];
+        
+        [self startHandling];
+        self.viewNeedsToBeReset = [UIApplication sharedApplication].keyWindow.presentViewController.view;
         self.assistantHeight = 10.f;
+        
     }
     return self;
 }
 
-- (instancetype)initWithTheViewNeedsToBeReset:(UIView *)view
+- (void)startHandling
 {
-    self = [self init];
-    
-    if (self) {
-        self.viewNeedsToBeReset = view;
-    }
-    
-    return self;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willKeyboardShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willKeyboardHide:) name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didFirstResponderChanged:) name:LJWFirstResponderChanged object:nil];
+}
+
+- (void)stopHandling
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:LJWFirstResponderChanged object:nil];
 }
 
 - (void)willKeyboardShow:(NSNotification *)notification
@@ -95,11 +94,18 @@
     
 //    NSLog(@"%@", NSStringFromCGRect(self.firstResponder.frame));
     
-    CGRect firstResponderFrameInWindow = [self.firstResponder convertRect:self.firstResponder.bounds toView:[UIApplication sharedApplication].keyWindow.presentViewController.view];
+    UIView *tempSuperView = [[UIView alloc] initWithFrame:self.viewNeedsToBeReset.frame];
+    UIView *tempSuberView = [[UIView alloc] initWithFrame:self.firstResponder.frame];
+    [tempSuperView addSubview:tempSuberView];
+    [self.firstResponder.window addSubview:tempSuperView];
+    
+    CGRect firstResponderFrameInWindow = [tempSuberView convertRect:tempSuberView.bounds toView:self.firstResponder.window];
+    
+    [tempSuperView removeFromSuperview];
     
     if (self.firstResponder) {
         
-        if (self.keyboardFrame.origin.y < firstResponderFrameInWindow.origin.y + firstResponderFrameInWindow.size.height) {
+        if (self.keyboardFrame.origin.y < firstResponderFrameInWindow.origin.y + firstResponderFrameInWindow.size.height + self.assistantHeight) {
             
             [self addBoundsChangeAnimationFrome:self.viewNeedsToBeReset.bounds to:CGRectMake(0, (firstResponderFrameInWindow.origin.y + firstResponderFrameInWindow.size.height - self.keyboardFrame.origin.y + self.assistantHeight), self.viewNeedsToBeReset.frame.size.width, self.viewNeedsToBeReset.frame.size.height) inView:self.viewNeedsToBeReset];
             
@@ -150,9 +156,8 @@
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:LJWFirstResponderChanged object:nil];
+//    NSLog(@"%@ dealloc", self);
+    [self stopHandling];
 }
 
 #pragma mark - 如果缺少类目请使用此方法获取presentViewController
@@ -194,6 +199,11 @@
 
 - (void)didFirstResponderChanged:(NSNotification *)notification
 {
+    
+    if (self.firstResponder == notification.userInfo[@"firstResponder"]) {
+        return;
+    }
+    
     self.firstResponder = notification.userInfo[@"firstResponder"];
     
     if (self.isKeyboardShowing) {

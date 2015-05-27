@@ -10,6 +10,8 @@
 
 @interface UIWindow (LJWPresentViewController)
 
-@property (nonatomic, strong, readonly) UIViewController *presentViewController;
+//@property (nonatomic, strong, readonly) UIViewController *presentViewController;
+
+- (UIViewController *)presentViewController;
 
 @end
