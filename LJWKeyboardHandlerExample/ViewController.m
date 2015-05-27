@@ -7,9 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "LJWKeyboardHandler.h"
-//#import "UIView+FirstResponderNotification.h"
-//#import "IQKeyboardManager.h"
 #import "UIViewController+LJWKeyboardHandlerHelper.h"
 
 @interface ViewController ()
