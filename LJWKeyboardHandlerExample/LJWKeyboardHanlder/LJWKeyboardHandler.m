@@ -55,6 +55,15 @@
     return self;
 }
 
+- (UIView *)viewNeedsToBeReset
+{
+    if (!_viewNeedsToBeReset) {
+        _viewNeedsToBeReset = [UIApplication sharedApplication].keyWindow.presentViewController.view;
+    }
+    return _viewNeedsToBeReset;
+}
+
+
 - (void)startHandling
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willKeyboardShow:) name:UIKeyboardWillShowNotification object:nil];
@@ -138,15 +147,6 @@
 
 - (void)addBoundsChangeAnimationFrome:(CGRect)from to:(CGRect)to inView:(UIView *)view
 {
-//    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"bounds"];
-//    animation.fromValue = [NSValue valueWithCGRect:from];
-//    animation.toValue = [NSValue valueWithCGRect:to];
-//    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//    animation.speed = 0.8;
-//    animation.fillMode = kCAFillModeForwards;
-//    animation.removedOnCompletion = NO;
-//    view.layer.bounds = to;
-//    [view.layer addAnimation:animation forKey:@"a"];
     
     [UIView animateWithDuration:0.25 animations:^{
         view.bounds = to;
