@@ -11,7 +11,7 @@
  *
  *  强烈不建议直接使用此类,如果掉坑里了就自己爬出来吧~~~
  *
- *  如需直接使用,请在vc里保留,并在viewDidAppear里开始调用startHandling,在viewWillDisappear里调用stopHandling;
+ *  如需直接使用,请在vc里保留,并在viewDidAppear里使用法调用startHandling,在viewWillDisappear里调用stopHandling;
  */
 
 #import <Foundation/Foundation.h>
