@@ -6,6 +6,14 @@
 //  Copyright (c) 2015年 Mark. All rights reserved.
 //
 
+/*
+ *  由于有问题还没解决,目前只支持自动调整vc.view。
+ *
+ *  强烈不建议直接使用此类,如果掉坑里了就自己爬出来吧~~~
+ *
+ *  如需直接使用,请在vc里保留,并在viewDidAppear里开始调用startHandling,在viewWillDisappear里调用stopHandling;
+ */
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 

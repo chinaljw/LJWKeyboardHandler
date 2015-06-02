@@ -69,4 +69,11 @@ static char *const LJWKeyboardHandlerKey = "LJWKeyboardHandlerKey";
     [self.ljwKeyboardHandler stopHandling];
 }
 
+- (LJWKeyboardHandler *)registerLJWKeyboardHandler
+{
+    self.ljwKeyboardHandler = [[LJWKeyboardHandler alloc] init];
+    
+    return self.ljwKeyboardHandler;
+}
+
 @end

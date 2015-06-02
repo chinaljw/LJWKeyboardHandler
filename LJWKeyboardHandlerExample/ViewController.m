@@ -19,8 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //初始化一下就好
-    self.ljwKeyboardHandler = [[LJWKeyboardHandler alloc] init];
+    //注册一下就好~
+    [self registerLJWKeyboardHandler];
     
 }
 

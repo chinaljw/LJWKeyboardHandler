@@ -34,6 +34,7 @@
 
 /**
  *  需要被调整的视图
+ *  目前只支持vc.view,所以没有开放设置。
  */
 @property (nonatomic, strong) UIView *viewNeedsToBeReset;
 
@@ -162,7 +163,7 @@
 
 #pragma mark - 如果缺少类目请使用此方法获取presentViewController
 /**
- *  递归获取当前展示的viewController请传入keywindow的根视图
+ *  递归获取当前展示的viewController请传入keywindow的根视图控制器
  *
  *  @param currentViewController 当前的vc
  *

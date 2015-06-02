@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) LJWKeyboardHandler *ljwKeyboardHandler;
 
+- (LJWKeyboardHandler *)registerLJWKeyboardHandler;
+
 @end
