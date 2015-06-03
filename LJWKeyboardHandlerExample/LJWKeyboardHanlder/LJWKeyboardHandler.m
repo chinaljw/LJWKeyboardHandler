@@ -49,7 +49,6 @@
     if (self) {
         
         [self startHandling];
-        self.viewNeedsToBeReset = [UIApplication sharedApplication].keyWindow.presentViewController.view;
         self.assistantHeight = 10.f;
         
     }

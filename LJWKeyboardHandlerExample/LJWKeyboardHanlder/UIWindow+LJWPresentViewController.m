@@ -29,8 +29,8 @@
         return [self getPresentViewController:[(UITabBarController *)currentViewController selectedViewController]];
     }
     
-    if ([currentViewController presentingViewController]) {
-        return [self getPresentViewController:[currentViewController presentingViewController]];
+    if ([currentViewController presentedViewController]) {
+        return [self getPresentViewController:[currentViewController presentedViewController]];
     }
     
     return currentViewController;
