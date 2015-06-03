@@ -106,6 +106,9 @@
     
     UIView *tempSuperView = [[UIView alloc] initWithFrame:self.viewNeedsToBeReset.frame];
     UIView *tempSuberView = [[UIView alloc] initWithFrame:self.firstResponder.frame];
+    
+    tempSuberView.frame = [self.firstResponder convertRect:self.firstResponder.bounds toView:self.viewNeedsToBeReset];
+    
     [tempSuperView addSubview:tempSuberView];
     [self.firstResponder.window addSubview:tempSuperView];
     
@@ -141,7 +144,7 @@
         return;
     }
     
-    [self addBoundsChangeAnimationFrome:self.viewNeedsToBeReset.bounds to:self.viewNeedsToBeReset.frame inView:self.viewNeedsToBeReset];
+    [self addBoundsChangeAnimationFrome:self.viewNeedsToBeReset.bounds to:CGRectMake(0, 0, self.viewNeedsToBeReset.bounds.size.width, self.viewNeedsToBeReset.bounds.size.height) inView:self.viewNeedsToBeReset];
     
     self.isOrigin = YES;
 }
