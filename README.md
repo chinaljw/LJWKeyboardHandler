@@ -6,8 +6,17 @@
 
 可以在不同的ViewController里设置不同的辅助移动高度~
 
-insert code in ViewController
+添加了Keyboard的ToolBar支持跳到下一个上一个和收回键盘。
 
-Just like this
+KeyboardToolBar supported;
+
+Insert one line code in ViewController;
+
+Just like this;
 
 [self registerLJWKeyboardHandler];
+
+
+
+
+
