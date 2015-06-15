@@ -25,6 +25,11 @@
 @property (nonatomic, assign) CGFloat assistantHeight;
 
 /**
+ *  是否显示keyboardToolBar(默认显示)
+ */
+@property (nonatomic, assign) BOOL shouldShowKeyboardToolBar;
+
+/**
  *  开始处理
  */
 - (void)startHandling;

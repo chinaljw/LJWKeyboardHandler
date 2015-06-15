@@ -21,7 +21,7 @@
     
     //注册一下就好~
     [self registerLJWKeyboardHandler];
-    
+        
 }
 
 - (void)didReceiveMemoryWarning {

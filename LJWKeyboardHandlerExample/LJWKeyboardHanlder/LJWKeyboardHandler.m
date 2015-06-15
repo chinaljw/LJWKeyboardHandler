@@ -9,8 +9,10 @@
 #import "LJWKeyboardHandler.h"
 #import "UIWindow+LJWPresentViewController.h"
 #import "UIView+FirstResponderNotification.h"
+#import "LJWKeyboardToolBar.h"
+#import "UIView+FindOutViews.h"
 
-@interface LJWKeyboardHandler ()
+@interface LJWKeyboardHandler () <LJWKeyboardToolBarDelegate>
 
 /**
  *  键盘是否出现
@@ -38,6 +40,10 @@
  */
 @property (nonatomic, strong) UIView *viewNeedsToBeReset;
 
+/**
+ *  键盘的accessoryView
+ */
+@property (nonatomic, strong) LJWKeyboardToolBar *ljwKeyboardToolBar;
 
 @end
 
@@ -50,9 +56,55 @@
         
         [self startHandling];
         self.assistantHeight = 10.f;
-        
+        self.shouldShowKeyboardToolBar = YES;
     }
     return self;
+}
+
+- (UIToolbar *)ljwKeyboardToolBar
+{
+    if (!_ljwKeyboardToolBar) {
+        _ljwKeyboardToolBar = [[LJWKeyboardToolBar alloc] initWithFrame:CGRectMake(0, 0, [UIApplication sharedApplication].keyWindow.frame.size.width, 44)];
+        _ljwKeyboardToolBar.ljwKeyboardDelegate = self;
+        
+        //添加当前view里所有会弹键盘的responder
+        _ljwKeyboardToolBar.responders = [[UIApplication sharedApplication].keyWindow.presentViewController.view findOutViews:@[[UITextField class], [UITextView class], [UISearchBar class]]];
+
+    }
+    
+    return _ljwKeyboardToolBar;
+}
+
+- (void)setFirstResponder:(UIView *)firstResponder
+{
+    
+    if (_firstResponder == firstResponder) {
+        return;
+    }
+    
+    _firstResponder = firstResponder;
+    
+    if (self.shouldShowKeyboardToolBar) {
+        
+        if (!_firstResponder.inputAccessoryView) {
+            
+            if ([_firstResponder respondsToSelector:@selector(setInputAccessoryView:)]) {
+                [_firstResponder performSelector:@selector(setInputAccessoryView:) withObject:self.ljwKeyboardToolBar];
+            }
+            
+        }
+        
+        self.ljwKeyboardToolBar.currentResponder = firstResponder;
+        
+    }
+    else
+    {
+        if ([_firstResponder respondsToSelector:@selector(setInputAccessoryView:)]) {
+            [_firstResponder performSelector:@selector(setInputAccessoryView:) withObject:nil];
+        }
+    }
+
+    
 }
 
 - (UIView *)viewNeedsToBeReset
@@ -214,5 +266,7 @@
     }
 
 }
+
+#pragma mark - LJWKeyboardToolBarDelegate
 
 @end
