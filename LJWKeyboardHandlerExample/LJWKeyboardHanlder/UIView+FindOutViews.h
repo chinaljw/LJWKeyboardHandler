@@ -12,4 +12,6 @@
 
 - (NSMutableArray *)findOutViews:(NSArray *)viewClasses;
 
+- (NSMutableArray *)findOutAllSubViewsCanBecomeFirstResponder;
+
 @end

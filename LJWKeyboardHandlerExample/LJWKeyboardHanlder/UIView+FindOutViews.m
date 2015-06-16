@@ -47,5 +47,27 @@
     return views;
 }
 
+- (NSMutableArray *)findOutAllSubViewsCanBecomeFirstResponder
+{
+    NSArray *subviews = self.subviews;
+    
+    NSMutableArray *views = [[NSMutableArray alloc] initWithCapacity:subviews.count];
+    
+    for (UIView *view in subviews) {
+        
+        if ([view canBecomeFirstResponder]) {
+            [views addObject:view];
+        }
+        else
+        {
+            [views addObjectsFromArray:[view findOutAllSubViewsCanBecomeFirstResponder]];
+        }
+        
+    }
+    
+    return views;
+
+}
+
 
 @end

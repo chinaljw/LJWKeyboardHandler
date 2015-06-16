@@ -68,7 +68,7 @@
         _ljwKeyboardToolBar.ljwKeyboardDelegate = self;
         
         //添加当前view里所有会弹键盘的responder
-        _ljwKeyboardToolBar.responders = [[UIApplication sharedApplication].keyWindow.presentViewController.view findOutViews:@[[UITextField class], [UITextView class], [UISearchBar class]]];
+        _ljwKeyboardToolBar.responders = [[UIApplication sharedApplication].keyWindow.presentViewController.view findOutAllSubViewsCanBecomeFirstResponder];
 
     }
     
