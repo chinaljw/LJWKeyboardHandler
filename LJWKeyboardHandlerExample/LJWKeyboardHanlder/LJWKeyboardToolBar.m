@@ -31,16 +31,24 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        self.lastItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"LJWButtonBarArrowLeft"] style:UIBarButtonItemStylePlain target:self action:@selector(didClickLastItem:)];
+        NSString *resourcesBundlePath = [[NSBundle mainBundle] pathForResource:@"Resources" ofType:@"bundle"];
+        
+        NSBundle *resourcesBundle = [NSBundle bundleWithPath:resourcesBundlePath];
+        
+        UIImage *lastImage = [UIImage imageWithContentsOfFile:[resourcesBundle pathForResource:@"LJWButtonBarArrowLeft@2x" ofType:@"png"]];
+        
+        UIImage *nextImage = [UIImage imageWithContentsOfFile:[resourcesBundle pathForResource:@"LJWButtonBarArrowRight@2x" ofType:@"png"]];
+        
+        self.lastItem = [[UIBarButtonItem alloc] initWithImage:lastImage style:UIBarButtonItemStylePlain target:self action:@selector(didClickLastItem:)];
         
         UIBarButtonItem *fixedItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
         fixedItem.width = 20.f;
         
-        self.nextItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"LJWButtonBarArrowRight"] style:UIBarButtonItemStylePlain target:self action:@selector(didClickNextItem:)];
+        self.nextItem = [[UIBarButtonItem alloc] initWithImage:nextImage style:UIBarButtonItemStylePlain target:self action:@selector(didClickNextItem:)];
         
         UIBarButtonItem *flexibleItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
         
-        NSString *doneTitle = NSLocalizedStringFromTable(@"LJWDone", @"LJWKeyBoardLocalization", nil);
+        NSString *doneTitle = NSLocalizedStringFromTableInBundle(@"Done", @"LJWKeyBoardLocalization", resourcesBundle, nil);
         
         UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithTitle:doneTitle style:UIBarButtonItemStyleDone target:self action:@selector(didClickDoneItem:)];
         

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-static NSString *const LJWFirstResponderChanged = @"kLJWFirstResponderChanged";
+static NSString *const LJWFirstResponderChanged = @"LJWFirstResponderChanged";
 
 @interface UIView (FirstResponderNotification)
 

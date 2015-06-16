@@ -9,10 +9,7 @@
 /* Begin PBXBuildFile section */
 		723AAE841B157C6F005460FB /* UIViewController+LJWKeyboardHandlerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 723AAE831B157C6F005460FB /* UIViewController+LJWKeyboardHandlerHelper.m */; };
 		726529C31B2EAC4100FC2FFA /* LJWKeyboardToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 726529C21B2EAC4100FC2FFA /* LJWKeyboardToolBar.m */; };
-		726529C71B2EAD4A00FC2FFA /* LJWButtonBarArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 726529C51B2EAD4A00FC2FFA /* LJWButtonBarArrowLeft@2x.png */; };
-		726529C81B2EAD4A00FC2FFA /* LJWButtonBarArrowRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 726529C61B2EAD4A00FC2FFA /* LJWButtonBarArrowRight@2x.png */; };
 		726529CB1B2EBE9C00FC2FFA /* UIView+FindOutViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 726529CA1B2EBE9C00FC2FFA /* UIView+FindOutViews.m */; };
-		726529F01B2F2DC900FC2FFA /* LJWKeyBoardLocalization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726529F21B2F2DC900FC2FFA /* LJWKeyBoardLocalization.strings */; };
 		72D2B4261B0A408400AB51F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B4251B0A408400AB51F1 /* main.m */; };
 		72D2B4291B0A408400AB51F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B4281B0A408400AB51F1 /* AppDelegate.m */; };
 		72D2B42C1B0A408400AB51F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B42B1B0A408400AB51F1 /* ViewController.m */; };
@@ -23,6 +20,7 @@
 		72D2B44E1B0A40DF00AB51F1 /* LJWKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B44B1B0A40DF00AB51F1 /* LJWKeyboardHandler.m */; };
 		72D2B44F1B0A40DF00AB51F1 /* UIWindow+LJWPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B44D1B0A40DF00AB51F1 /* UIWindow+LJWPresentViewController.m */; };
 		72D2B4521B0A49CC00AB51F1 /* UIView+FirstResponderNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D2B4511B0A49CC00AB51F1 /* UIView+FirstResponderNotification.m */; };
+		72F421541B2FEB1A00379677 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 72F421531B2FEB1A00379677 /* Resources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +38,8 @@
 		723AAE831B157C6F005460FB /* UIViewController+LJWKeyboardHandlerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LJWKeyboardHandlerHelper.m"; sourceTree = "<group>"; };
 		726529C11B2EAC4100FC2FFA /* LJWKeyboardToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJWKeyboardToolBar.h; sourceTree = "<group>"; };
 		726529C21B2EAC4100FC2FFA /* LJWKeyboardToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJWKeyboardToolBar.m; sourceTree = "<group>"; };
-		726529C51B2EAD4A00FC2FFA /* LJWButtonBarArrowLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LJWButtonBarArrowLeft@2x.png"; sourceTree = "<group>"; };
-		726529C61B2EAD4A00FC2FFA /* LJWButtonBarArrowRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LJWButtonBarArrowRight@2x.png"; sourceTree = "<group>"; };
 		726529C91B2EBE9C00FC2FFA /* UIView+FindOutViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindOutViews.h"; sourceTree = "<group>"; };
 		726529CA1B2EBE9C00FC2FFA /* UIView+FindOutViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindOutViews.m"; sourceTree = "<group>"; };
-		726529EF1B2F2DAF00FC2FFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		726529F11B2F2DC900FC2FFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LJWKeyBoardLocalization.strings; sourceTree = "<group>"; };
-		726529F31B2F2DCB00FC2FFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LJWKeyBoardLocalization.strings"; sourceTree = "<group>"; };
 		72D2B4201B0A408400AB51F1 /* LJWKeyboardHandlerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LJWKeyboardHandlerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D2B4241B0A408400AB51F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72D2B4251B0A408400AB51F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +59,7 @@
 		72D2B44D1B0A40DF00AB51F1 /* UIWindow+LJWPresentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+LJWPresentViewController.m"; sourceTree = "<group>"; };
 		72D2B4501B0A49CC00AB51F1 /* UIView+FirstResponderNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FirstResponderNotification.h"; sourceTree = "<group>"; };
 		72D2B4511B0A49CC00AB51F1 /* UIView+FirstResponderNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FirstResponderNotification.m"; sourceTree = "<group>"; };
+		72F421531B2FEB1A00379677 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,16 +80,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		726529C41B2EAD3400FC2FFA /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				726529C51B2EAD4A00FC2FFA /* LJWButtonBarArrowLeft@2x.png */,
-				726529C61B2EAD4A00FC2FFA /* LJWButtonBarArrowRight@2x.png */,
-				726529F21B2F2DC900FC2FFA /* LJWKeyBoardLocalization.strings */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
 		72D2B4171B0A408400AB51F1 = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +143,7 @@
 		72D2B4491B0A40DF00AB51F1 /* LJWKeyboardHanlder */ = {
 			isa = PBXGroup;
 			children = (
-				726529C41B2EAD3400FC2FFA /* Resource */,
+				72F421531B2FEB1A00379677 /* Resources.bundle */,
 				72D2B44A1B0A40DF00AB51F1 /* LJWKeyboardHandler.h */,
 				72D2B44B1B0A40DF00AB51F1 /* LJWKeyboardHandler.m */,
 				72D2B44C1B0A40DF00AB51F1 /* UIWindow+LJWPresentViewController.h */,
@@ -258,9 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72D2B42F1B0A408400AB51F1 /* Main.storyboard in Resources */,
-				726529F01B2F2DC900FC2FFA /* LJWKeyBoardLocalization.strings in Resources */,
-				726529C71B2EAD4A00FC2FFA /* LJWButtonBarArrowLeft@2x.png in Resources */,
-				726529C81B2EAD4A00FC2FFA /* LJWButtonBarArrowRight@2x.png in Resources */,
+				72F421541B2FEB1A00379677 /* Resources.bundle in Resources */,
 				72D2B4341B0A408400AB51F1 /* LaunchScreen.xib in Resources */,
 				72D2B4311B0A408400AB51F1 /* Images.xcassets in Resources */,
 			);
@@ -311,15 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		726529F21B2F2DC900FC2FFA /* LJWKeyBoardLocalization.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				726529F11B2F2DC900FC2FFA /* en */,
-				726529F31B2F2DCB00FC2FFA /* zh-Hans */,
-			);
-			name = LJWKeyBoardLocalization.strings;
-			sourceTree = "<group>";
-		};
 		72D2B42D1B0A408400AB51F1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -332,7 +305,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				72D2B4331B0A408400AB51F1 /* Base */,
-				726529EF1B2F2DAF00FC2FFA /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
