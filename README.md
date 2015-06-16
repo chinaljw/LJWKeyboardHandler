@@ -12,7 +12,7 @@
 
 Insert one line code in ViewController;
 
-Just like this;
+Just like this
 
 [self registerLJWKeyboardHandler];
 
