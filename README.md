@@ -8,7 +8,7 @@
 
 添加了Keyboard的ToolBar支持跳到下一个上一个和收回键盘。
 
-KeyboardToolBar supported;
+支持CocoaPods了哟~~~
 
 Insert one line code in ViewController;
 
@@ -16,8 +16,9 @@ Just like this;
 
 [self registerLJWKeyboardHandler];
 
-CocoaPods supported;
+KeyboardToolBar supported;
 
+CocoaPods supported;
 pod 'LJWKeyboardHandler', '~> 1.0.0'
 
 
