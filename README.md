@@ -16,6 +16,10 @@ Just like this;
 
 [self registerLJWKeyboardHandler];
 
+CocoaPods supported;
+
+pod 'LJWKeyboardHandler', '~> 1.0.0'
+
 
 
 
