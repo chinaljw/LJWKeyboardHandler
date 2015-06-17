@@ -121,9 +121,17 @@
 
 - (void)setCurrentResponder:(UIResponder *)currentResponder
 {
-    _currentResponder = currentResponder;
     
-    self.currentResponderIndex = [self.responders indexOfObject:currentResponder];
+    if ([currentResponder isKindOfClass:NSClassFromString(@"UISearchBarTextField")]) {
+        
+        _currentResponder = [[(UIView *)currentResponder superview] superview];
+    }
+    else
+    {
+        _currentResponder = currentResponder;
+    }
+    
+    self.currentResponderIndex = [self.responders indexOfObject:_currentResponder];
     
     [_currentResponder becomeFirstResponder];
 }
