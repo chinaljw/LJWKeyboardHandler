@@ -19,6 +19,7 @@ Just like this
 KeyboardToolBar supported;
 
 CocoaPods supported;
+
 pod 'LJWKeyboardHandler', '~> 1.0.0'
 
 
