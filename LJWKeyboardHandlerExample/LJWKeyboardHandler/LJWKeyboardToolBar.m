@@ -7,6 +7,7 @@
 //
 
 #import "LJWKeyboardToolBar.h"
+#import "LJWKeyboardHandlerHeaders.h"
 
 @interface LJWKeyboardToolBar ()
 
@@ -150,6 +151,11 @@
     self.currentResponderIndex --;
     
     self.currentResponder = [self.responders objectAtIndex:self.currentResponderIndex];
+}
+
+- (NSMutableArray *)responders
+{
+    return [[UIApplication sharedApplication].keyWindow.presentViewController.view findOutAllSubViewsCanBecomeFirstResponder];
 }
 
 @end

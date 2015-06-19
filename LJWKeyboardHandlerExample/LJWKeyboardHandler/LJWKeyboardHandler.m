@@ -11,6 +11,8 @@
 #import "LJWKeyboardToolBar.h"
 #import "UIView+LJWKeyboardHandlerAddtion.h"
 
+Class _UIAlertControllerTextField;
+
 @interface LJWKeyboardHandler () <LJWKeyboardToolBarDelegate>
 
 /**
@@ -48,6 +50,11 @@
 
 @implementation LJWKeyboardHandler
 
++ (void)initialize
+{
+    _UIAlertControllerTextField = NSClassFromString(@"_UIAlertControllerTextField");
+}
+
 - (instancetype)init
 {
     self = [super init];
@@ -67,7 +74,7 @@
         _ljwKeyboardToolBar.ljwKeyboardDelegate = self;
         
         //添加当前view里所有会弹键盘的responder
-        _ljwKeyboardToolBar.responders = [[UIApplication sharedApplication].keyWindow.presentViewController.view findOutAllSubViewsCanBecomeFirstResponder];
+//        _ljwKeyboardToolBar.responders = [[UIApplication sharedApplication].keyWindow.presentViewController.view findOutAllSubViewsCanBecomeFirstResponder];
 
     }
     
@@ -82,6 +89,10 @@
     }
     
     _firstResponder = firstResponder;
+    
+    if (!_firstResponder.shouldBeFoundOut) {
+        return;
+    }
     
     if (self.shouldShowKeyboardToolBar) {
         
@@ -131,6 +142,11 @@
 
 - (void)willKeyboardShow:(NSNotification *)notification
 {
+    
+    if (!self.firstResponder.shouldBeFoundOut) {
+        return;
+    }
+    
     self.isKeyboardShowing = YES;
     
     self.keyboardFrame = [notification.userInfo[@"UIKeyboardFrameEndUserInfoKey"] CGRectValue];
@@ -260,7 +276,7 @@
     
     self.firstResponder = notification.userInfo[@"firstResponder"];
     
-    if (self.isKeyboardShowing) {
+    if (self.isKeyboardShowing && self.firstResponder.shouldBeFoundOut && self.firstResponder.class != _UIAlertControllerTextField) {
         [self resetTheViewNeedsToBeResetAppropraitly];
     }
 

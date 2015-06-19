@@ -12,8 +12,6 @@
 static char *const kShouldBeFoundOut = "kShouldBeFoundOut";
 static char *const kAssistantHeight = "kAssistantHeight";
 
-Class _UIAlertControllerTextField;
-
 @implementation UIView (LJWKeyboardHandlerAddtion)
 
 /*
@@ -98,8 +96,6 @@ Class _UIAlertControllerTextField;
 + (void)load
 {
     
-    _UIAlertControllerTextField = NSClassFromString(@"_UIAlertControllerTextField");
-    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
@@ -126,11 +122,7 @@ Class _UIAlertControllerTextField;
 {
     
     //    NSLog(@"%@ becomeFirstResponder", self);
-    
-    if (self.class != _UIAlertControllerTextField && self.shouldBeFoundOut) {
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:LJWFirstResponderChanged object:nil userInfo:@{@"firstResponder":self}];
-    }
+    [[NSNotificationCenter defaultCenter] postNotificationName:LJWFirstResponderChanged object:nil userInfo:@{@"firstResponder":self}];
     
     return [self ljw_becomeFirstResponder];
 }
