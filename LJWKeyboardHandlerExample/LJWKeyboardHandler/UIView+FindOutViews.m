@@ -51,6 +51,22 @@
 {
     NSArray *subviews = self.subviews;
     
+    subviews = [subviews sortedArrayUsingComparator:^NSComparisonResult(UIView *view1, UIView *view2) {
+        
+        if (view1.frame.origin.y < view2.frame.origin.y) {
+            return NSOrderedAscending;
+        }
+        else if (view1.frame.origin.y == view2.frame.origin.y)
+        {
+            return NSOrderedSame;
+        }
+        else
+        {
+            return NSOrderedDescending;
+        }
+        
+    }];
+    
     NSMutableArray *views = [[NSMutableArray alloc] initWithCapacity:subviews.count];
     
     for (UIView *view in subviews) {

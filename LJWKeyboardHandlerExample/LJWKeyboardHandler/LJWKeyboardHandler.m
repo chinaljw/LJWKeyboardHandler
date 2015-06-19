@@ -78,7 +78,7 @@
 - (void)setFirstResponder:(UIView *)firstResponder
 {
     
-    if (_firstResponder == firstResponder) {
+    if (_firstResponder == firstResponder || [firstResponder isKindOfClass:[UIWindow class]]) {
         return;
     }
     
