@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "UIViewController+LJWKeyboardHandlerHelper.h"
+#import "LJWKeyboardHandlerHeaders.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *test;
 
 @end
 
@@ -21,7 +23,9 @@
     
     //注册一下就好~
     [self registerLJWKeyboardHandler];
-        
+    
+    self.test.assistantHeight = 50;
+    
 }
 
 - (void)didReceiveMemoryWarning {

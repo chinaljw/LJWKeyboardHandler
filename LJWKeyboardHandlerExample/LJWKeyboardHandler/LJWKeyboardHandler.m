@@ -8,9 +8,8 @@
 
 #import "LJWKeyboardHandler.h"
 #import "UIWindow+LJWPresentViewController.h"
-#import "UIView+FirstResponderNotification.h"
 #import "LJWKeyboardToolBar.h"
-#import "UIView+FindOutViews.h"
+#import "UIView+LJWKeyboardHandlerAddtion.h"
 
 @interface LJWKeyboardHandler () <LJWKeyboardToolBarDelegate>
 
@@ -169,9 +168,9 @@
     
     if (self.firstResponder) {
         
-        if (self.keyboardFrame.origin.y < firstResponderFrameInWindow.origin.y + firstResponderFrameInWindow.size.height + self.assistantHeight) {
+        if (self.keyboardFrame.origin.y < firstResponderFrameInWindow.origin.y + firstResponderFrameInWindow.size.height + self.assistantHeight + self.firstResponder.assistantHeight) {
             
-            [self addBoundsChangeAnimationFrome:self.viewNeedsToBeReset.bounds to:CGRectMake(0, (firstResponderFrameInWindow.origin.y + firstResponderFrameInWindow.size.height - self.keyboardFrame.origin.y + self.assistantHeight), self.viewNeedsToBeReset.frame.size.width, self.viewNeedsToBeReset.frame.size.height) inView:self.viewNeedsToBeReset];
+            [self addBoundsChangeAnimationFrome:self.viewNeedsToBeReset.bounds to:CGRectMake(0, (firstResponderFrameInWindow.origin.y + firstResponderFrameInWindow.size.height - self.keyboardFrame.origin.y + self.assistantHeight + self.firstResponder.assistantHeight), self.viewNeedsToBeReset.frame.size.width, self.viewNeedsToBeReset.frame.size.height) inView:self.viewNeedsToBeReset];
             
             self.isOrigin = NO;
             
