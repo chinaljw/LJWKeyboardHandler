@@ -57,7 +57,7 @@
 		72F421641B30520500379677 /* UIWindow+LJWPresentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+LJWPresentViewController.m"; path = "LJWKeyboardHandlerExample/LJWKeyboardHandler/UIWindow+LJWPresentViewController.m"; sourceTree = SOURCE_ROOT; };
 		72FA20AE1B3452820045049D /* UIView+LJWKeyboardHandlerAddtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+LJWKeyboardHandlerAddtion.h"; path = "LJWKeyboardHandlerExample/LJWKeyboardHandler/UIView+LJWKeyboardHandlerAddtion.h"; sourceTree = SOURCE_ROOT; };
 		72FA20AF1B3452820045049D /* UIView+LJWKeyboardHandlerAddtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+LJWKeyboardHandlerAddtion.m"; path = "LJWKeyboardHandlerExample/LJWKeyboardHandler/UIView+LJWKeyboardHandlerAddtion.m"; sourceTree = SOURCE_ROOT; };
-		72FA20B11B34538C0045049D /* LJWKeyboardHandlerHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJWKeyboardHandlerHeaders.h; sourceTree = SOURCE_ROOT; };
+		72FA20B21B346D0F0045049D /* LJWKeyboardHandlerHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LJWKeyboardHandlerHeaders.h; path = LJWKeyboardHandlerExample/LJWKeyboardHandler/LJWKeyboardHandlerHeaders.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +152,7 @@
 				72F421621B30520500379677 /* UIViewController+LJWKeyboardHandlerHelper.m */,
 				72F421631B30520500379677 /* UIWindow+LJWPresentViewController.h */,
 				72F421641B30520500379677 /* UIWindow+LJWPresentViewController.m */,
-				72FA20B11B34538C0045049D /* LJWKeyboardHandlerHeaders.h */,
+				72FA20B21B346D0F0045049D /* LJWKeyboardHandlerHeaders.h */,
 			);
 			name = LJWKeyboardHandler;
 			path = LJWKeyboardHanlder;
