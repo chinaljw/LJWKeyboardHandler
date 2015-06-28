@@ -9,20 +9,18 @@
 #import "UIViewController+LJWKeyboardHandlerHelper.h"
 #import <objc/runtime.h>
 
-static char *const LJWKeyboardHandlerKey = "LJWKeyboardHandlerKey";
-
 @implementation UIViewController (LJWKeyboardHandlerHelper)
 
 @dynamic ljwKeyboardHandler;
 
 - (void)setLjwKeyboardHandler:(LJWKeyboardHandler *)ljwKeyboardHandler
 {
-    objc_setAssociatedObject(self, LJWKeyboardHandlerKey, ljwKeyboardHandler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(ljwKeyboardHandler), ljwKeyboardHandler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (LJWKeyboardHandler *)ljwKeyboardHandler
 {
-    return objc_getAssociatedObject(self, LJWKeyboardHandlerKey);
+    return objc_getAssociatedObject(self, @selector(ljwKeyboardHandler));
 }
 
 #pragma mark - MethodSwizzling

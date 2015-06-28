@@ -9,8 +9,6 @@
 #import "UIWindow+LJWPresentViewController.h"
 #import <objc/runtime.h>
 
-//static char *LJWPresentViewControllerKey = "LJWPresentViewControllerKey";
-
 @implementation UIWindow (LJWPresentViewController)
 
 - (UIViewController *)presentViewController

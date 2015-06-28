@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-static NSString *const LJWFirstResponderChanged = @"LJWFirstResponderChanged";
+static NSString *const kLJWFirstResponderChanged = @"kLJWFirstResponderChanged";
 
 @interface UIView (LJWKeyboardHandlerAddtion)
 

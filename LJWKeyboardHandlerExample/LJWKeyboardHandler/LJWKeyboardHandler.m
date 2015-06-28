@@ -130,14 +130,14 @@ Class _UIAlertControllerTextField;
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willKeyboardShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willKeyboardHide:) name:UIKeyboardWillHideNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didFirstResponderChanged:) name:LJWFirstResponderChanged object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didFirstResponderChanged:) name:kLJWFirstResponderChanged object:nil];
 }
 
 - (void)stopHandling
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:LJWFirstResponderChanged object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kLJWFirstResponderChanged object:nil];
 }
 
 - (void)willKeyboardShow:(NSNotification *)notification
@@ -230,43 +230,6 @@ Class _UIAlertControllerTextField;
     [self stopHandling];
 }
 
-#pragma mark - 如果缺少类目请使用此方法获取presentViewController
-/**
- *  递归获取当前展示的viewController请传入keywindow的根视图控制器
- *
- *  @param currentViewController 当前的vc
- *
- *  @return presentVC
- */
-- (UIViewController *)getPresentViewController:(UIViewController *)currentViewController
-{
-    
-    if ([currentViewController isKindOfClass:[UINavigationController class]]) {
-        return [self getPresentViewController:[(UINavigationController *)currentViewController topViewController]];
-    }
-    
-    if ([currentViewController isKindOfClass:[UITabBarController class]]) {
-        return [self getPresentViewController:[(UITabBarController *)currentViewController selectedViewController]];
-    }
-    
-    if ([currentViewController presentingViewController]) {
-        return [self getPresentViewController:[currentViewController presentingViewController]];
-    }
-    
-    return currentViewController;
-}
-
-+ (instancetype)shareHandler
-{
-    static LJWKeyboardHandler *s_Handler = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        s_Handler = [[LJWKeyboardHandler alloc] init];
-    });
-    
-    return s_Handler;
-}
-
 - (void)didFirstResponderChanged:(NSNotification *)notification
 {
     
@@ -281,7 +244,5 @@ Class _UIAlertControllerTextField;
     }
 
 }
-
-#pragma mark - LJWKeyboardToolBarDelegate
 
 @end

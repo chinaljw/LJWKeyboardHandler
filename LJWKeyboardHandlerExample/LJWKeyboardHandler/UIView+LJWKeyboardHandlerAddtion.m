@@ -9,9 +9,6 @@
 #import "UIView+LJWKeyboardHandlerAddtion.h"
 #import <objc/runtime.h>
 
-static char *const kShouldBeFoundOut = "kShouldBeFoundOut";
-static char *const kAssistantHeight = "kAssistantHeight";
-
 @implementation UIView (LJWKeyboardHandlerAddtion)
 
 /*
@@ -122,7 +119,7 @@ static char *const kAssistantHeight = "kAssistantHeight";
 {
     
     //    NSLog(@"%@ becomeFirstResponder", self);
-    [[NSNotificationCenter defaultCenter] postNotificationName:LJWFirstResponderChanged object:nil userInfo:@{@"firstResponder":self}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kLJWFirstResponderChanged object:nil userInfo:@{@"firstResponder":self}];
     
     return [self ljw_becomeFirstResponder];
 }
@@ -130,13 +127,13 @@ static char *const kAssistantHeight = "kAssistantHeight";
 #pragma mark - PropertyAddition
 - (void)setShouldBeFoundOut:(BOOL)shouldBeFoundOut
 {
-    objc_setAssociatedObject(self, kShouldBeFoundOut, @(shouldBeFoundOut), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(shouldBeFoundOut), @(shouldBeFoundOut), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (BOOL)shouldBeFoundOut
 {
     
-    NSNumber *shouldBeFoundOut = objc_getAssociatedObject(self, kShouldBeFoundOut);
+    NSNumber *shouldBeFoundOut = objc_getAssociatedObject(self, @selector(shouldBeFoundOut));
     
     if (!shouldBeFoundOut) {
         self.shouldBeFoundOut = YES;
@@ -148,12 +145,12 @@ static char *const kAssistantHeight = "kAssistantHeight";
 
 - (void)setAssistantHeight:(CGFloat)assistantHeight
 {
-    objc_setAssociatedObject(self, kAssistantHeight, @(assistantHeight), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(assistantHeight), @(assistantHeight), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (CGFloat)assistantHeight
 {
-    NSNumber *assistantHeight = objc_getAssociatedObject(self, kAssistantHeight);
+    NSNumber *assistantHeight = objc_getAssociatedObject(self, @selector(assistantHeight));
     
     if (!assistantHeight) {
         self.assistantHeight = 0;
