@@ -10,17 +10,17 @@
 
 支持CocoaPods了哟~~~
 
-Insert one line code in ViewController;
+#CocoaPods
 
-Just like this
+pod 'LJWKeyboardHandler', '~> 1.0.3'
+
+#How to use
+
+Just one line code.
 
 [self registerLJWKeyboardHandler];
 
-KeyboardToolBar supported;
 
-CocoaPods supported;
-
-pod 'LJWKeyboardHandler', '~> 1.0.3'
 
 
 
