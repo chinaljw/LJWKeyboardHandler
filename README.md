@@ -1,3 +1,5 @@
+# 当文本框在在scrollview里时会有问题，还有其他未知bug。。。请慎用。。
+
 # LJWKeyboardHandler
 
 监听键盘的小助手，帮你的TextField，TextView闪避键盘的攻击，在ViewController里注册下就能用了哟~
